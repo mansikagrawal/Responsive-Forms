@@ -1,0 +1,165 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-size: 10px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    body {
+        background-color: #e9e9e9;
+    }
+    
+    .form-container {
+        width: 90%;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    form {
+        width: 100%;
+        background-color: white;
+        max-width: 40rem;
+        padding: 3rem 0;
+        position: relative;
+        box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2), 0 -1.3rem 0 -.5rem #fff, 0 -1.3rem 1px -4px rgba(0, 0, 0, 0.2), 0 -2.5rem 0 -1rem #fff, 0 -2.5rem 1px -.9rem rgba(0, 0, 0, 0.2);
+    }
+    
+    .title {
+        position: relative;
+        width: 100%;
+        padding: 2rem 0;
+    }
+    
+    .title span {
+        color: #ed2553;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        margin-left: 1.5rem;
+    }
+    
+    .title span ::before {
+        content: '';
+        background-color: #ed2553;
+        width: 3px;
+        position: absolute;
+        height: 6rem;
+        border-radius: 0.8rem;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+    
+    .input-group {
+        width: 90%;
+        position: relative;
+        margin: 2rem auto;
+    }
+    
+    .input-group input {
+        position: relative;
+        width: 100%;
+        padding: 1rem 0;
+        margin-top: .5rem;
+        border: none;
+        color: #a1a1a1;
+        outline: none;
+        font-size: 1.8rem;
+    }
+    
+    .input-group .bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #757575;
+        width: 100%;
+        height: 1px;
+    }
+    
+    .input-group .bar::before {
+        content: '';
+        position: absolute;
+        background-color: #ed2553;
+        width: 0;
+        transition: width 650ms;
+        height: 2px;
+    }
+    
+    .input-group input:focus+.bar::before {
+        width: 100%;
+    }
+    
+    button {
+        width: 10rem;
+        height: 10rem;
+        background-color: #ed2553;
+        color: #fff;
+        border: .0rem solid #fff;
+        font-size: 2.5rem;
+        cursor: pointer;
+        position: absolute;
+        right: -4rem;
+        bottom: -4rem;
+        border-radius: 50%;
+        transition: all 650ms;
+    }
+    
+    .register {
+        text-align: center;
+        margin: 5rem auto;
+    }
+    
+    button:hover,
+    button:focus {
+        border-radius: .8rem;
+    }
+    
+    .register a {
+        text-decoration: none;
+        color: #a1a1a1;
+        font-size: 1.5rem;
+    }
+    
+    .register span {
+        color: #ed2553;
+    }
+    
+    .register span:hover {
+        border-bottom: 2px solid #ed2553;
+        padding-bottom: 2px;
+    }
+    
+    @media screen and (max-width:600px) {
+        .form {
+            width: 30rem;
+            padding: 1rem 0;
+        }
+        .title span {
+            font-size: 2rem;
+        }
+        .title span ::before {
+            height: 4rem;
+        }
+        .input-group {
+            margin: 0 auto;
+        }
+        .input-group input {
+            font-size: 1.5rem;
+        }
+        button {
+            width: 6rem;
+            height: 6rem;
+            bottom: -3rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .register {
+            margin: 2.5rem 0;
+        }
+    }
